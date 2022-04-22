@@ -1,0 +1,9 @@
+name: Show commit name in the log when push event is triggered
+on: push
+jobs:
+    auto-log:
+        runs-on: ubuntu-latest
+        steps:
+            - run: >
+                      echo "User ${{ github.event.inputs.username }} ran a workflow manually."
+                      echo "New commit"
